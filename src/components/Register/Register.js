@@ -37,6 +37,8 @@ class Register extends React.Component {
         if (user) {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
+        } else {
+          alert('This email already registed.');
         }
       });
   }
