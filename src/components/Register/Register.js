@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/register/', {
+    fetch('https://nameless-sierra-41157.herokuapp.com/register/', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -37,8 +37,6 @@ class Register extends React.Component {
         if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
-        } else {
-          alert('This email already registed.');
         }
       });
   }
